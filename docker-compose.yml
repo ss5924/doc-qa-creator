@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  doc_qa_creator:
+    build: .
+    container_name: doc-qa-creator
+    volumes:
+      - ./logs:/app/logs
+    restart: unless-stopped
+    environment:
+      - PYTHONUNBUFFERED=1

@@ -23,7 +23,7 @@ async def generate_questions_throttled(chunk, num_q=3):
 질문:"""
         try:
             response = await client.chat.completions.create(
-                model="gpt-4",
+                model="gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.7,
             )
